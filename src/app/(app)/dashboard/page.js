@@ -1,7 +1,7 @@
 import Header from '@/app/(app)/Header'
 
 export const metadata = {
-    title: 'Laravel ',
+    title: 'Laravel',
 }
 
 const Dashboard = () => {
