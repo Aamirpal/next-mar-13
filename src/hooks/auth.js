@@ -19,9 +19,11 @@ export const useAuth = ({ middleware, redirectIfAuthenticated } = {}) => {
             }),
     )
 
-    const csrf = () => axios.get('/sanctum/csrf-cookie')
+    const testApi = () => axios.get('/sanctum/csrf-cookie')
+    const csrf = () => axios.get('https://jsonplaceholder.typicode.com/posts')
 
     const register = async ({ setErrors, ...props }) => {
+        await testApi()
         await csrf()
 
         setErrors([])
